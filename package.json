@@ -1,0 +1,39 @@
+{
+  "name": "wisdomnet-template-drafter",
+  "version": "1.0.0",
+  "description": "A recursive, editable, and expandable metastructure for designing CodexNodes and all related entities",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "dependencies": {
+    "axios": "^0.27.2",
+    "d3": "^7.8.4",
+    "react": "^18.2.0",
+    "react-d3-graph": "^2.6.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^5.3.4",
+    "react-scripts": "5.0.1"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^14.4.3"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "proxy": "http://localhost:8000"
+} 

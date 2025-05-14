@@ -1,0 +1,174 @@
+/**
+ * DriftVisualizer.css
+ * 
+ * Styling for the Drift Phase Visualizer component
+ *
+ * VERSION HISTORY:
+ * 1.0.0 - 2025-05-13 - Initial implementation with graph visualization styling
+ */
+
+.drift-visualizer-container {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0 auto;
+  padding: 20px;
+  max-width: 1200px;
+}
+
+.drift-visualizer-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.drift-visualizer-header h2 {
+  margin: 0;
+  color: #333;
+  font-size: 1.8rem;
+}
+
+.drift-visualizer-header button {
+  padding: 8px 16px;
+  background-color: #61dafb;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.2s ease;
+}
+
+.drift-visualizer-header button:hover {
+  background-color: #4fa8d1;
+}
+
+.drift-visualizer-header button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+.error-message {
+  padding: 10px;
+  margin-bottom: 15px;
+  color: #721c24;
+  background-color: #f8d7da;
+  border: 1px solid #f5c6cb;
+  border-radius: 4px;
+}
+
+.graph-container {
+  background-color: #f8f9fa;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.no-data-message {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  color: #666;
+  font-style: italic;
+}
+
+.node-details-panel {
+  margin-top: 20px;
+  padding: 15px;
+  background-color: #f8f9fa;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.node-details-panel h3 {
+  margin-top: 0;
+  color: #333;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
+  margin-bottom: 15px;
+}
+
+.node-details-panel p {
+  margin: 8px 0;
+  line-height: 1.5;
+}
+
+.node-details-panel strong {
+  display: inline-block;
+  width: 100px;
+  font-weight: bold;
+}
+
+.action-buttons {
+  margin-top: 15px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.action-buttons button {
+  padding: 8px 16px;
+  background-color: #61dafb;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.2s ease;
+}
+
+.action-buttons button:hover {
+  background-color: #4fa8d1;
+  transform: translateY(-2px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Special styling for different action buttons */
+.action-buttons button:nth-child(2) {
+  background-color: #28a745; /* green for edit */
+}
+
+.action-buttons button:nth-child(2):hover {
+  background-color: #218838;
+}
+
+.action-buttons button:nth-child(3) {
+  background-color: #17a2b8; /* teal for fork */
+}
+
+.action-buttons button:nth-child(3):hover {
+  background-color: #138496;
+}
+
+.action-buttons button:nth-child(4) {
+  background-color: #6f42c1; /* purple for invoke */
+}
+
+.action-buttons button:nth-child(4):hover {
+  background-color: #5e35a1;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .drift-visualizer-container {
+    padding: 10px;
+  }
+  
+  .graph-container {
+    height: 50vh !important;
+  }
+  
+  .node-details-panel {
+    padding: 10px;
+  }
+  
+  .action-buttons {
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  .action-buttons button {
+    width: 100%;
+  }
+} 
