@@ -1,145 +1,66 @@
-# WisdomNET Template Drafter
+# WISDOMNET · TEMPLATE DRAFTER
 
-A recursive, editable, and expandable metastructure for designing CodexNodes and all related entities within the LOG.OS framework.
+### Knowledge structures should evolve without losing their lineage.
 
-## Overview
+**Recursive schema research · symbolic nodes · template provenance · human/agent co-design**
 
-The Template Drafter serves as the "codex that writes the codex" - a template of template builders that allows for the iterative evolution of structures for symbolic memory, invocation, drift, lineage, logging, and agent contracts.
+A long-lived symbolic system needs more than a collection of JSON documents. The structures that organize knowledge must themselves be inspectable and versioned: where a field came from, how a concept was grouped, which constraints changed, and what an agent should or should not infer from a revised template.
 
-This system enables the collaborative development of the LOG.OS template layer through:
+**WisdomNET Template Drafter** is the LOG.OS/CodexNode design workspace exploring that idea. The intended system describes composable templates, symbolic metadata, drift/lineage tracking, recursive template operations and human/AI interfaces for developing schemas over time.
 
-- **Idea capture**: Store unstructured symbolic ideas with agent attribution
-- **Conceptual clustering**: Group related ideas into semantic clusters
-- **Proto-field synthesis**: Generate structured fields from idea clusters
-- **Structural evolution**: Track the changes of template components over time
-- **Feedback reinforcement**: Record the effectiveness of evolving template structures
-- **Deep learning integration**: Enhance pattern recognition and drift prediction through neural networks
-- **Interactive visualization**: Monitor and manipulate CodexNodes through a dynamic graph interface
+> **Current repository boundary:** this GitHub tree contains project documentation, design references, a React-based UI source area and an archived ZIP. Several commands and folders shown in earlier documentation describe a **larger envisioned/external source layout**; they are **not all present as executable files in the current Git tree**. This README does not claim a fully operating symbolic API, neural training service or authenticated deployment.
 
-## Components
+**[Architecture](docs/ARCHITECTURE.md)** · **[Deep-learning design](docs/DEEP_LEARNING_INTEGRATION.md)** · **[Visualization design](docs/VISUALIZATION_INTEGRATION.md)** · **[Versioning concepts](docs/script_versioning_guide.md)**
 
-The Template Drafter consists of several interrelated components:
+---
 
-1. **Core Libraries**
-   - Template validation and processing
-   - Symbolic signature extraction
-   - Drift operators and comparators
-   - Ghost binding and invocation mechanisms
+## A codex that can explain its own evolution
 
-2. **Services and APIs**
-   - CodexNode API for validation, enrichment, and export
-   - Echo Logger for drift and resonance tracking
-   - Ghost Agent API for recursive operations
-   - Pattern Recognition services for structure mapping
+```mermaid
+flowchart TD
+  IDEA["Human/agent idea and provenance"] --> PROTO["Concept cluster / proposed template"]
+  PROTO --> SCHEMA["Typed CodexNode fields and constraints"]
+  SCHEMA --> VERSION["Versioned structural change"]
+  VERSION --> GRAPH["Lineage, relations and drift observation"]
+  GRAPH --> REVIEW["Review and acceptance"]
+  REVIEW --> SCHEMA
+```
 
-3. **Deep Learning Integration**
-   - Neural template encoding for vector embeddings
-   - Pattern detection across templates
-   - Drift prediction for forecasting evolution
-   - Embedding visualization for exploring relationships
+A template authoring engine becomes more useful when its changes have semantic receipts: not just that the text changed, but how the accepted schema changed and which downstream nodes may require a migration.
 
-4. **User Interfaces**
-   - Command Line Interface (CLI) for system operations
-   - Web-based template editor and validator
-   - Drift Phase Visualizer for exploring relationships
-   - Embedding visualization for pattern analysis
+### Intended research domains
 
-## Installation
+| Concern | Design objective |
+|---|---|
+| **Symbolic structures** | Typed CodexNodes and explicitly named relationships |
+| **Template composition** | Reusable schema elements that can be nested or evolved |
+| **Provenance** | Origin and attribution for fields, constraints and derived templates |
+| **Drift analysis** | Compare revisions without silently changing the meaning of existing instances |
+| **Human review** | Explain proposed schema changes and keep approval authority explicit |
+| **Learning/embeddings** | Research candidate for discovery of structural similarity—not a proven neural service |
+
+## What is presently in Git
+
+The `src/ui/` tree holds React interface code, while `docs/` contains the architectural and visualization design documents. The root `package.json` specifies React Scripts and a local API proxy. The source tree visible from GitHub does **not** include all of the Python API, neural training and CLI paths named in the earlier README.
+
+This is therefore best treated as a **design/source recovery checkpoint**. Before describing the complete template engine as runnable, restore the missing named source modules from the preserved originals and verify them with a manifest and tests.
+
+## Minimal source investigation
 
 ```bash
-# Clone the repository
-git clone https://github.com/[YOUR-USERNAME]/WisdomNET-Template-Drafter.git
+git clone https://github.com/sev-32/WisdomNET-Template-Drafter.git
 cd WisdomNET-Template-Drafter
-
-# Install Python dependencies
-pip install -r requirements.txt
-
-# Install UI dependencies
 npm install
 ```
 
-## Usage
+The historical `npm start` script is declared by the package, but the complete React build entry/required files should be verified before treating it as a functioning application. Do not fabricate missing API endpoints or sample template data to claim that archival parity is complete.
 
-### Basic Usage
+## Connection to ontology and intelligent tooling
 
-```bash
-# Start the CodexNode API service
-python src/services/codex_api.py
+WisdomNET's premise aligns with larger efforts toward verifiable AI and symbolic memory: structured ideas should retain their origin, and machine assistance should expose changes as reviewable proposals instead of losing meaning through repeated rewriting.
 
-# Launch the web interface
-npm start
+**The aim is a knowledge system that can change—and still explain what it used to mean.**
 
-# Process templates through CLI
-python deep_learning_cli.py encode --template-path templates/example.json
-```
+---
 
-### Visualization
-
-The Template Drafter includes a powerful visualization component:
-
-```bash
-# Access the visualization interface
-npm start
-# Then navigate to http://localhost:3000/visualizer
-```
-
-## Documentation
-
-- [Deep Learning Integration](docs/DEEP_LEARNING_INTEGRATION.md)
-- [Script Versioning System](docs/script_versioning_guide.md)
-- [Visualization Integration](docs/VISUALIZATION_INTEGRATION.md)
-
-## Development
-
-The Template Drafter follows a neural-symbolic approach, combining the interpretability of symbolic systems with the pattern recognition capabilities of neural networks.
-
-### Script Versioning System
-
-For robust development, we use an in-script versioning system that:
-- Maintains multiple implementation versions within files
-- Provides easy rollback capabilities
-- Documents changes with timestamps and explanations
-- Enables safe experimentation with new implementations
-
-## Project Structure
-
-```
-WisdomNET-Template-Drafter/
-├── docs/                 # Documentation files
-│   ├── DEEP_LEARNING_INTEGRATION.md
-│   ├── VISUALIZATION_INTEGRATION.md
-│   ├── script_versioning_guide.md
-│   └── design_specs/     # Additional specifications
-├── src/                  # Source code
-│   ├── core/             # Core system components
-│   ├── models/           # Data models
-│   ├── services/         # Services and business logic
-│   │   └── pattern_recognition/
-│   │       └── deep_learning/
-│   │           ├── models/      # Neural models
-│   │           ├── training/    # Training infrastructure
-│   │           └── inference/   # Inference services
-│   └── ui/               # React-based UI components
-│       └── components/
-│           └── DriftVisualizer.jsx  # Visual graph interface
-├── storage/              # Data storage
-│   ├── elements/         # Raw template storage
-│   ├── embeddings/       # Neural embeddings storage
-│   └── exports/          # Exported CodexNodes
-├── app.py                # Main application CLI
-├── deep_learning_cli.py  # Deep learning CLI tool
-├── codex_api.py          # CodexNode REST API
-├── ghost_agent.py        # Ghost Agent shell
-├── run_template_drafter.sh # Main launcher script
-├── run_deep_learning.sh  # Deep learning tools launcher
-├── requirements.txt      # Python dependencies
-└── package.json          # JavaScript dependencies
-```
-
-## License
-
-This project is part of the WisdomNET framework and follows its licensing terms.
-
-## Contributors
-
-- The LOG.OS development team 
+*This README distinguishes architectural design from independently demonstrated implementation; no source modules were modified.*
